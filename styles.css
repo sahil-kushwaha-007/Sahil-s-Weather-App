@@ -1,0 +1,108 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Default background gradient */
+    transition: background 0.5s ease-in-out;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: textPop 0.5s ease-out;
+}
+
+@keyframes textPop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+input:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#weather-info {
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.weather-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.weather-card p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+#weather-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
